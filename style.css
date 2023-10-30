@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background: url("images/image.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Segoe UI", "Tahoma", "Georgia", sans-serif;
+}
+
+.container {
+    padding: 1rem ;
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    background-color: deeppink;
+}
+
+.time {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+h1, p {
+    color: white;
+}
+
+button {
+    padding: 0.4rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 10px;
+    border: 1px solid #f8f8f8;
+}
+
+button:hover {
+    background-color: black;
+    color: lightpink;
+}
