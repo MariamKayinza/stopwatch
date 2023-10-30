@@ -1,8 +1,10 @@
 window.onload = function (){
+    let hours = 0;
     let minutes = 0;
     let seconds = 0;
     let tens = 0o0;
 
+    let appendHours = document.querySelector('#hours');
     let appendMinutes = document.querySelector('#minutes');
     let appendSeconds = document.querySelector('#seconds');
     let appendTens = document.querySelector('#tens');
@@ -37,6 +39,16 @@ window.onload = function (){
             seconds = 0;
             appendSeconds.innerHTML = '0' + 0;
         }
+        if (minutes > 1){
+            appendMinutes.innerHTML = minutes;
+        }
+        if(minutes > 59 ) {
+            hours++;
+            appendHours.innerHTML = '0' + hours;
+            minutes = 0;
+            appendMinutes.innerHTML = '0' + 0;
+        }
+
     };
 
     startBtn.onclick = () => {
@@ -48,4 +60,18 @@ window.onload = function (){
     stopBtn.onclick = () => {
       clearInterval(Interval)
     }
+
+    resetBtn.onclick = () => {
+        clearInterval(Interval)
+        tens = '00'
+        seconds = '00'
+        minutes = '00'
+        hours = '00'
+
+        appendTens.innerHTML = tens
+        appendSeconds.innerHTML = seconds
+        appendMinutes.innerHTML = minutes
+        appendHours.innerHTML = hours
+    }
+
 };
